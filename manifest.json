@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Mr Nygma",
+  "version": "0.1.0",
+  "description": "Click here for answers.",
+  "homepage_url": "https://shattereddisk.github.io/rickroll/rickroll.mp4",
+  "icons": {
+    "16": "icons/mysterion.jpg",
+    "48": "icons/mysterion.jpg",
+    "128": "icons/mysterion.jpg"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/mysterion.jpg",
+      "48": "icons/mysterion.jpg",
+      "128": "icons/mysterion.jpg"
+    }
+  },
+  "default_locale": "en", 
+  "permissions": [
+    "https://*/",
+    "http://*/",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"  
+      ]
+    }
+  ]
+}
